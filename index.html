@@ -31,6 +31,8 @@
         --purple-soft: #ede9fe;
         --rose: #e11d48;
         --rose-soft: #ffe4e6;
+        --teal: #0d9488;
+        --teal-soft: #ccfbf1;
       }
 
       html {
@@ -609,6 +611,12 @@
               <p>Zero-touch provisioning in &lt;60 seconds</p>
             </div>
             <div class="info-row">
+              <div class="info-dot" style="background: var(--teal)"></div>
+              <p>
+                Streaming telemetry from cEOS &rarr; Prometheus &rarr; Grafana
+              </p>
+            </div>
+            <div class="info-row">
               <div class="info-dot" style="background: var(--rose)"></div>
               <p>Based in Boston, open to relocation</p>
             </div>
@@ -661,6 +669,17 @@
             </div>
           </div>
           <div class="sk-card">
+            <div class="sk-icon">📊</div>
+            <h3>Observability</h3>
+            <div class="tags">
+              <span class="tag">Prometheus</span><span class="tag">Grafana</span
+              ><span class="tag">gNMI</span> <span class="tag">gnmic</span
+              ><span class="tag">OpenConfig</span><span class="tag">YANG</span>
+              <span class="tag">PromQL</span><span class="tag">pyang</span
+              ><span class="tag">CloudWatch</span>
+            </div>
+          </div>
+          <div class="sk-card">
             <div class="sk-icon">☁️</div>
             <h3>Cloud</h3>
             <div class="tags">
@@ -710,7 +729,10 @@
               drift detector), and a GitHub Actions CI/CD pipeline running 40
               pytest tests via NAPALM that block merges on failure. Dual-layer
               secrets with Ansible Vault + GitHub Secrets, plus Gitleaks
-              scanning.
+              scanning. The latest phase adds streaming telemetry: gnmic
+              subscribing to OpenConfig gNMI paths on the cEOS fleet (interface
+              counters, state, BGP neighbors, CPU/memory) feeding Prometheus,
+              with a 6-panel Grafana dashboard auto-provisioned on deploy.
             </p>
             <div class="tags" style="margin-bottom: 1rem">
               <span class="tag">Containerlab</span
@@ -718,7 +740,10 @@
               <span class="tag">NETCONF</span><span class="tag">ncclient</span
               ><span class="tag">NAPALM</span> <span class="tag">pytest</span
               ><span class="tag">GitHub Actions</span
-              ><span class="tag">Jinja2</span>
+              ><span class="tag">Jinja2</span> <span class="tag">gNMI</span
+              ><span class="tag">gnmic</span><span class="tag">Prometheus</span>
+              <span class="tag">Grafana</span
+              ><span class="tag">OpenConfig</span>
             </div>
             <a
               href="https://github.com/rushivt/netaform"
